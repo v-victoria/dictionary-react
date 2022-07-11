@@ -1,5 +1,6 @@
 import React from "react";
 
+import "./Data.css";
 import Meanings from "./Meanings";
 
 export default function Data({ data }) {

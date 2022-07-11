@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import "./Dictionary.css";
 import Data from "./Data";
 
 export default function Dictionary() {
