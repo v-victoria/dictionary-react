@@ -1,23 +1,31 @@
-import React, { useState, useEffect, useRef } from "react";
-import AudioControl from "./AudioControl";
+import React, { useState, useEffect } from "react";
 import "./Phonetic.css";
 
 export default function Phonetic({ phonetic }) {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const audioRef = useRef(new Audio(phonetic.audio));
-
   useEffect(() => {
+    const audioRef = new Audio(phonetic.audio);
+
     if (isPlaying) {
-      audioRef.current.play();
+      audioRef.play();
       setIsPlaying(false);
     }
-  }, [isPlaying]);
+  }, [isPlaying, phonetic.audio]);
 
   if (phonetic.text && phonetic.audio !== "") {
     return (
       <div className="Phonetic">
-        <AudioControl audio={phonetic.audio} setIsPlaying={setIsPlaying} />
+        <span className="audio-controls">
+          <button
+            type="button"
+            className="pause"
+            onClick={() => setIsPlaying(true)}
+            aria-label="Pause"
+          >
+            <i className="fa-solid fa-volume-high"></i>
+          </button>
+        </span>
         <span>{phonetic.text}</span>
       </div>
     );
