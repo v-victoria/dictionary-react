@@ -55,3 +55,27 @@
 .Dictionary .example span:hover {
   cursor: pointer;
 }
+
+@media (max-width: 767px) {
+  .Dictionary h1 {
+    font-size: 36px;
+  }
+  .Dictionary h2 {
+    font-size: 16px;
+  }
+
+  .Dictionary section {
+    margin: 6px;
+    padding: 20px 15px;
+  }
+
+  .Dictionary input {
+    height: 56px;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 18px;
+  }
+  .Dictionary img {
+    margin: 20px auto;
+  }
+}

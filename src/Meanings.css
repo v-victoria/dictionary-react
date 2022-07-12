@@ -21,3 +21,22 @@
   color: gray;
   font-size: 14px;
 }
+@media (max-width: 767px) {
+  .Meanings h4 {
+    font-weight: 700;
+    margin: 0 0 20px;
+    text-align: center;
+  }
+
+  .Meanings .info {
+    margin-left: 20px;
+  }
+
+  .Meanings .info p {
+    margin: 0 0 10px 0;
+  }
+  .Meanings .info p em {
+    color: gray;
+    font-size: 14px;
+  }
+}
