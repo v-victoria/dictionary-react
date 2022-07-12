@@ -22,7 +22,7 @@ export default function Dictionary(props) {
       <div className="example">
         i.e. <span onClick={saveExample}>coding</span>,{" "}
         <span onClick={saveExample}>wine</span>,{" "}
-        <span onClick={saveExample}>life</span>,{" "}
+        <span onClick={saveExample}>flower</span>,{" "}
         <span onClick={saveExample}>paris</span>
       </div>
     </section>

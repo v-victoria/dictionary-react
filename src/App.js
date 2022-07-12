@@ -4,7 +4,7 @@ import Dictionary from "./Dictionary";
 function App() {
   return (
     <div className="App">
-      <Dictionary defaultWord="prime" />
+      <Dictionary defaultWord="life" />
       <footer>
         This project was coded by <b>Victoria Martynenko</b> and is open-sourced
         on{" "}
