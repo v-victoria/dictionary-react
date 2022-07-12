@@ -4,9 +4,10 @@ import axios from "axios";
 import "./Dictionary.css";
 import Data from "./Data";
 
-export default function Dictionary() {
-  const [word, setWord] = useState(null);
+export default function Dictionary(props) {
+  const [word, setWord] = useState(props.defaultWord);
   const [data, setData] = useState(null);
+  const [loaded, setLoaded] = useState(false);
 
   function saveWord(event) {
     setWord(event.target.value);
@@ -16,20 +17,38 @@ export default function Dictionary() {
     setData(response.data);
   }
 
-  function search(event) {
+  function handleSubmit(event) {
     event.preventDefault();
+    search();
+  }
+
+  function search() {
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiURL).then(getData);
   }
 
-  return (
-    <div className="Dictionary">
-      <h1>Dictionary</h1>
-      <h2>What word do you want to look up?</h2>
-      <form onSubmit={search}>
-        <input type="search" placeholder="Search" onChange={saveWord} />
-      </form>
-      <Data data={data} />
-    </div>
-  );
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <h1>Dictionary</h1>
+        <section>
+          <h2>What word do you want to look up?</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              placeholder="Search"
+              value={word}
+              onChange={saveWord}
+            />
+          </form>
+          <div>i.e. paris, wine, yoga, coding</div>
+        </section>
+        <Data data={data} />
+      </div>
+    );
+  } else {
+    search();
+    setLoaded(true);
+    return "Loading...";
+  }
 }

@@ -1,3 +1,15 @@
-.Data h3 {
-  margin-top: 50px;
+.Data .header {
+  margin-top: 80px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+}
+.Data .header h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.Data .header p {
+  font-weight: 400;
+  color: gray;
+  font-size: 14px;
 }

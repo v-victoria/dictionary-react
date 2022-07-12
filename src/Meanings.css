@@ -1,13 +1,18 @@
-.Meanings {
-  margin: 30px 0;
-  text-align: left;
-}
 .Meanings h4 {
-  margin: 40px 0 20px;
+  font-weight: 700;
+  margin: 0 0 20px;
 }
 .Meanings h5 {
   margin-top: 20px;
 }
 .Meanings .info {
   margin-left: 30px;
+}
+
+.Meanings .info p {
+  margin: 0 0 10px 20px;
+}
+.Meanings .info p em {
+  color: gray;
+  font-size: 14px;
 }

@@ -5,17 +5,21 @@ import Meanings from "./Meanings";
 import Phonetic from "./Phonetic";
 
 export default function Data({ data }) {
+  console.log(data);
   if (data) {
     return (
       <div className="Data">
         {data.map((meaning, index) => {
           return (
             <div key={index}>
-              <h3>{meaning.word}</h3>
-              <p>{meaning.phonetic}</p>
+              <section className="header">
+                <h3>{meaning.word}</h3>
+                <p>{meaning.phonetic}</p>
+              </section>
               {meaning.phonetics.map((phonetic, i) => {
                 return <Phonetic key={i} phonetic={phonetic} />;
               })}
+
               <Meanings meanings={meaning.meanings} />
             </div>
           );

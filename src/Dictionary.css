@@ -1,7 +1,29 @@
-.Dictionary {
+.Dictionary h1 {
   text-align: center;
+  padding: 10px;
+  font-size: 48px;
 }
 .Dictionary h2 {
-  font-size: 24px;
-  margin: 30px 0 10px;
+  font-size: 18px;
+}
+
+.Dictionary section {
+  background: #fcf8e8;
+  margin: 16px;
+  padding: 30px 45px;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px #94b49f9c;
+}
+
+.Dictionary input {
+  width: 100%;
+  border: #94b49f solid 1px;
+  border-radius: 4px;
+  display: block;
+  height: 64px;
+  color: #666;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 22px;
+  margin: 10px 0;
 }
