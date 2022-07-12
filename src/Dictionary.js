@@ -4,9 +4,11 @@ import notFoundImg from "./svg/not-found.svg";
 
 import "./Dictionary.css";
 import Data from "./Data";
+import Photos from "./Photos";
 
 export default function Dictionary(props) {
   const [word, setWord] = useState(props.defaultWord);
+  const [photos, setPhotos] = useState(null);
   const [inputWord, setInputWord] = useState(null);
   const [data, setData] = useState(null);
   const [loaded, setLoaded] = useState(null);
@@ -34,11 +36,6 @@ export default function Dictionary(props) {
     setInputWord(event.target.value);
   }
 
-  function getData(response) {
-    setData(response.data);
-    setLoaded("success");
-  }
-
   function handleSubmit(event) {
     event.preventDefault();
     setWord(inputWord);
@@ -46,6 +43,21 @@ export default function Dictionary(props) {
 
   useEffect(() => {
     let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+
+    function getPhotos(response) {
+      setPhotos(response.data.photos);
+    }
+
+    function getData(response) {
+      setData(response.data);
+
+      axios
+        .get(`https://api.pexels.com/v1/search?query=${word}&per_page=9`)
+        .then(getPhotos);
+
+      setLoaded("success");
+    }
+
     axios
       .get(apiURL)
       .then(getData)
@@ -60,6 +72,7 @@ export default function Dictionary(props) {
         <h1>Dictionary</h1>
         {searchSection}
         <Data data={data} />
+        <Photos photos={photos} />
       </div>
     );
   } else {

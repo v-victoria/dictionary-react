@@ -1,0 +1,8 @@
+.Photos section {
+  margin-top: 60px;
+}
+.Photos img {
+  margin: 12px 0;
+  width: 100%;
+  border-radius: 6px;
+}

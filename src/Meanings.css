@@ -1,3 +1,8 @@
+.Meanings {
+  display: flex;
+  flex-direction: column;
+}
+
 .Meanings h4 {
   font-weight: 700;
   margin: 0 0 20px;

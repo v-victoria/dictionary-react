@@ -5,7 +5,6 @@ import Meanings from "./Meanings";
 import Phonetic from "./Phonetic";
 
 export default function Data({ data }) {
-  console.log(data);
   if (data) {
     return (
       <div className="Data">
