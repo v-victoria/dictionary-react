@@ -13,3 +13,7 @@
   color: gray;
   font-size: 14px;
 }
+
+.Data .phonetics-block {
+  display: flex;
+}

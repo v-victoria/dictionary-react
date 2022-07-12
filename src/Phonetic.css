@@ -6,9 +6,12 @@
   padding: 6px 8px 5px 8px;
   margin-right: 10px;
   border: 1px solid #94b49f;
-  transition: all 3ms ease-out;
+  transition: all 150ms ease-out;
 }
 .Phonetic button:hover {
   background-color: #94b49f;
   color: white;
+}
+.Phonetic {
+  width: 100%;
 }

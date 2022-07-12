@@ -15,7 +15,7 @@ export default function Phonetic({ phonetic }) {
 
   if (phonetic.text && phonetic.audio !== "") {
     return (
-      <div className="Phonetic">
+      <span className="Phonetic">
         <section>
           <span className="audio-controls">
             <button
@@ -29,7 +29,7 @@ export default function Phonetic({ phonetic }) {
           </span>
           <span>{phonetic.text}</span>
         </section>
-      </div>
+      </span>
     );
   } else {
     return null;

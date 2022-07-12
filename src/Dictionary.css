@@ -27,3 +27,31 @@
   padding: 22px;
   margin: 10px 0;
 }
+.Dictionary img {
+  display: block;
+  width: 60%;
+  margin: 50px auto;
+}
+.Dictionary .home-link {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  padding: 8px 16px;
+  background-color: white;
+  color: #94b49f;
+  border-radius: 8px;
+  border: 1px solid #94b49f;
+  transition: all 150ms ease-out;
+  text-decoration: none;
+}
+.Dictionary .home-link:hover {
+  background-color: #94b49f;
+  color: white;
+}
+
+.Dictionary .example span {
+  text-decoration: underline;
+}
+.Dictionary .example span:hover {
+  cursor: pointer;
+}

@@ -16,10 +16,11 @@ export default function Data({ data }) {
                 <h3>{meaning.word}</h3>
                 <p>{meaning.phonetic}</p>
               </section>
-              {meaning.phonetics.map((phonetic, i) => {
-                return <Phonetic key={i} phonetic={phonetic} />;
-              })}
-
+              <div className="phonetics-block">
+                {meaning.phonetics.map((phonetic, i) => {
+                  return <Phonetic key={i} phonetic={phonetic} />;
+                })}
+              </div>
               <Meanings meanings={meaning.meanings} />
             </div>
           );
