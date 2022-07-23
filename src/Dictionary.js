@@ -88,10 +88,7 @@ export default function Dictionary(props) {
         <div className="Dictionary">
           <h1>Word not found</h1>
           <img src={notFoundImg} alt="Word not found" />
-          <a
-            href="https://friendly-sorbet-75c8cf.netlify.app/"
-            className="home-link"
-          >
+          <a href="/" className="home-link">
             Go to home page
           </a>
         </div>

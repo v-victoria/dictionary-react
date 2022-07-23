@@ -16,7 +16,7 @@ function App() {
           GitHub
         </a>{" "}
         and hosted on{" "}
-        <a href="https://friendly-sorbet-75c8cf.netlify.app/">Netlify</a>
+        <a href="https://vm-dictionary-app-react.netlify.app/">Netlify</a>
       </footer>
     </div>
   );
